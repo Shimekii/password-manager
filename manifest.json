@@ -1,0 +1,25 @@
+{
+    "name": "SecurePass - Менеджер паролей",
+    "short_name": "SecurePass",
+    "description": "Локальный менеджер паролей",
+    "start_url": "./index.html",
+    "scope": "./", 
+    "display": "standalone",
+    "orientation": "portrait",
+    "background-color": "#444444",
+    "theme-color": "#1a73e8",
+    "icons": [{
+        "src": "icons/icon_192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "icons/icon_512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }],
+    "lang": "ru",
+    "dir": "ltr"
+}

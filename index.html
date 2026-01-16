@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/icon_192x192.png" type="image/x-icon">
+    <title>Менеджер паролей</title>
+</head>
+<body>
+    <!--Окно для настройки генератора паролей-->
+    <div class="window-gen-pass" id="window">
+        <div class="block-settings">
+            <h1 style="color: #000;">Выберите настройки сложности пароля</h1>
+            <div class="checkboxes">
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="nums">
+                        <span>0-9</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lowercase">
+                        <span>a-z</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uppercase">
+                        <span>A-Z</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="symbols">
+                        <span>Символы</span>
+                    </label>
+                </div>
+            </div>
+                <label class="pass-length">
+                    <span style="color: #000;">Введите длину пароля:</span>
+                    <input type="text" value="12" id="len-pass" class="input">
+                </label>
+            <button type="button" class="btn input" id="gen-pass">Сгенерировать пароль</button>
+        </div>
+    </div>
+    <!--Основной контейнер-->
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 5px;">МЕНЕДЖЕР ПАРОЛЕЙ</h1>
+        <!--Блок с формой для ввода данных-->
+        <div class="manager">
+            <h1>Форма для ввода пароля</h1>
+            <input type="text" name="login" id="login" placeholder="Введите логин" class="input" required>
+            <div class="password-group">
+                <input type="password" name="password" id="password" placeholder="Введите пароль" class="input pass" required>
+                <button type="button" class="input btn" id="btn-show-window">Сгенерировать пароль</button>
+            </div>
+            <input type="url" name="url" id="url" placeholder="Введите url" class="input">
+            <button type="button" id="btn-save" class="input btn">СОХРАНИТЬ</button>
+            <hr>
+            <button type="button" id="btn-clear" class="input btn">ОЧИСТИТЬ ХРАНИЛИЩЕ</button>
+            <button type="button" id="btn-load" class="input btn">ПОКАЗАТЬ</button>
+            <button type="button" id="btn-hide" class="input btn">СКРЫТЬ</button>
+        </div>
+        <!--Блок для отображения сохраненных записей-->
+        <div class="viewpass">
+            <h1>Список сохраненных паролей</h1>
+            <div id="view">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
